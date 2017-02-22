@@ -1,0 +1,25 @@
+age,age,age in years
+bp,blood pressure,bp in mm/Hg
+sg,specific gravity,"sg - (1.005,1.010,1.015,1.020,1.025)"
+al,albumin,"al - (0,1,2,3,4,5)"
+su,sugar,"su - (0,1,2,3,4,5)"
+rbc,red blood cells,"rbc - (normal,abnormal)"
+pc,pus cell,"pc - (normal,abnormal)"
+pcc,pus cell clumps,"pcc - (present,notpresent)"
+ba,bacteria,"ba  - (present,notpresent)"
+bgr,blood glucose random,bgr in mgs/dl
+bu,blood urea,bu in mgs/dl
+sc,serum creatinine,sc in mgs/dl
+sod,sodium,sod in mEq/L
+pot,potassium,pot in mEq/L
+hemo,hemoglobin,hemo in gms
+pcv,packed cell volume,
+wc,white blood cell count,wc in cells/cumm
+rc,red blood cell count,rc in millions/cmm
+htn,hypertension,"htn - (yes,no)"
+dm,diabetes mellitus,"dm - (yes,no)"
+cad,coronary artery disease,"cad - (yes,no)"
+appet,appetite,"appet - (good,poor)"
+pe,pedal edema,"pe - (yes,no)"
+ane,anemia,"ane - (yes,no)"
+class,class,"class - (ckd,notckd)"
