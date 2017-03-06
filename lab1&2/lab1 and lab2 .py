@@ -223,12 +223,12 @@ def gradient_algorithm_plot(y_train,y_test,y_train_hat, y_test_hat,error_train,e
     plt.savefig(pdf, format='pdf')
     plt.close()
     
-    plt.plot(error_train)
+    plt.plot(error_train[0:500])
     plt.title("regression of mean square error of train data set")
     plt.savefig(pdf, format='pdf')
     plt.close()
     
-    plt.plot(error_test)
+    plt.plot(error_test[0:500])
     plt.title("regression of mean square error of test data set")
     plt.savefig(pdf, format='pdf')
     plt.close()
@@ -268,12 +268,12 @@ def steepest_decent_d_plot(y_train,y_test,y_train_hat, y_test_hat,error_train,er
     plt.savefig(pdf, format='pdf')
     plt.close()
     
-    plt.plot(error_train)
+    plt.plot(error_train[0:500])
     plt.title("regression of mean square error of train data set")
     plt.savefig(pdf, format='pdf')
     plt.close()
     
-    plt.plot(error_test)
+    plt.plot(error_test[0:500])
     plt.title("regression of mean square error of test data set")
     plt.savefig(pdf, format='pdf')
     plt.close()
@@ -361,26 +361,26 @@ if __name__ == "__main__":
     for F0 in [6, 4]:
         [X_train, X_test,y_train,y_test] = import_data(F0)
         
-        '''---- 1. MSE ----'''
-        [y_train_hat,y_test_hat,weights] = MSE(X_train, X_test,y_train,y_test)    
-        MSE_plot(y_train,y_test,y_train_hat, y_test_hat,F0,weights)
+#        '''---- 1. MSE ----'''
+#        [y_train_hat,y_test_hat,weights] = MSE(X_train, X_test,y_train,y_test)    
+#        MSE_plot(y_train,y_test,y_train_hat, y_test_hat,F0,weights)
+#    
     
-    
-        '''---- 2. gradient algorithm ----'''
-        [y_train_hat, y_test_hat,error_train,error_test,weights]=gradient_algorithm(X_train, X_test,y_train,y_test)    
-        gradient_algorithm_plot(y_train,y_test,y_train_hat, y_test_hat,error_train,error_test,F0,weights)
+#        '''---- 2. gradient algorithm ----'''
+#        [y_train_hat, y_test_hat,error_train,error_test,weights]=gradient_algorithm(X_train, X_test,y_train,y_test)    
+#        gradient_algorithm_plot(y_train,y_test,y_train_hat, y_test_hat,error_train,error_test,F0,weights)
 
        
         '''---- 3. steepest decent with dynamic step length ----'''
         [y_train_hat, y_test_hat,error_train,error_test,weights]=steepest_decent_d(X_train, X_test,y_train,y_test)    
         steepest_decent_d_plot(y_train,y_test,y_train_hat, y_test_hat,error_train,error_test,F0,weights)
-
-            
-        '''---- 4. PCA Regression ----'''
-        [y_train_hat_full,y_test_hat_full,y_train_hat_PCA,y_test_hat_PCA,error_train_full,
-        error_test_full,error_test_PCA,error_train_PCA,weights_full,weights_pca] = PCR(X_train, X_test,y_train,y_test)
-        PCR_plot(y_train,y_test,y_train_hat_full,y_test_hat_full,y_train_hat_PCA,y_test_hat_PCA,error_train_full,
-        error_test_full,error_test_PCA,error_train_PCA,F0,weights_full,weights_pca)
+#
+#            
+#        '''---- 4. PCA Regression ----'''
+#        [y_train_hat_full,y_test_hat_full,y_train_hat_PCA,y_test_hat_PCA,error_train_full,
+#        error_test_full,error_test_PCA,error_train_PCA,weights_full,weights_pca] = PCR(X_train, X_test,y_train,y_test)
+#        PCR_plot(y_train,y_test,y_train_hat_full,y_test_hat_full,y_train_hat_PCA,y_test_hat_PCA,error_train_full,
+#        error_test_full,error_test_PCA,error_train_PCA,F0,weights_full,weights_pca)
     
 #    '''
 #    impliment PCA by using scikit API

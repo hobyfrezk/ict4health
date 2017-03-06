@@ -333,8 +333,8 @@ def result(labeled_set,predicted_set):
 if __name__ == "__main__":
     start_time = time.time()
     
-    N_class=2  #N_class = 2 or 16    
-    Lab = 4    #Lab = 3 or 4 (for lab 4, N_class = 2)
+    N_class=1
+    Lab = 3    #Lab = 3 or 4 (for lab 4, N_class = 2)
     
     
     evaluation=pd.DataFrame(index=["accuracy","true_positive","true_negative","false_positive","false_negative"])
